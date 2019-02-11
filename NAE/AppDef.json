@@ -1,0 +1,32 @@
+{
+    "name": "GTC19 POWER+OpenACC Lab Image",
+    "description": "Image for GTC19 Lab on Acceleration of OpenPOWER Systems with OpenACC. Includes all necessary software. Access via Jupyter Notebooks.",
+    "author": "Andreas Herten",
+    "licensed": false,
+    "classifications": [
+        "Data Science",
+        "IBM POWER/Data Science",
+        "GPU",
+        "HPC",
+        "OpenACC",
+        "Training"
+    ],
+    "machines": [
+        "np*g*"
+    ],
+    "vault-types": [
+        "FILE",
+        "BLOCK",
+        "BLOCK_ARRAY",
+        "OBJECT"
+    ],
+    "commands": {
+        "Notebook": {
+            "path": "/usr/local/bin/nimbix_notebook",
+            "interactive": true,
+            "name": "Notebook",
+            "description": "Launch the Jupyter Notebook of the training.",
+            "parameters": {}
+        }
+    }
+}
