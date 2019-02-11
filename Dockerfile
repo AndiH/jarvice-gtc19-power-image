@@ -2,7 +2,7 @@ FROM nimbix/ubuntu-cuda-ppc64le
 MAINTAINER Andreas Herten 
 
 RUN apt-get -y update && \
-    apt-get -y install python3-pip zeromq
+    apt-get -y install python3-pip zmq
 
 RUN python3 -m pip install -U cython
 
