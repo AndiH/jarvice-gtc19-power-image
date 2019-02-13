@@ -29,7 +29,7 @@
             "parameters": {}
         },
         "Notebook_bash": {
-            "path": "/bin/bash /usr/local/bin/nimbix_notebook",
+            "path": "SHELL=/bin/bash /usr/local/bin/nimbix_notebook",
             "interactive": true,
             "name": "Notebook_bash",
             "description": "Launch the Jupyter Notebook of the training.",
