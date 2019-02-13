@@ -52,7 +52,8 @@ ENV CPATH ${CUDA_ROOT}/include/:${LIBRARY_PATH}
 
 # RUN sudo chsh -s /bin/bash nimbix
 # SHELL ["/bin/bash", "-c"]
-RUN sudo echo "SHELL=/bin/bash" >> /etc/environment
+# RUN sudo echo "SHELL=/bin/bash" >> /etc/environment
+RUN sed -i "s.exec jupyter.SHELL=/bin/bash exec jupyter." /usr/local/bin/nimbix_notebook
 
 #### META DATA FOR NIMBIX / JARVICE
 
