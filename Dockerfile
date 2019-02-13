@@ -48,6 +48,11 @@ ENV LD_LIBRARY_PATH ${CUDA_ROOT}/lib64/:${LD_LIBRARY_PATH}
 ENV LIBRARY_PATH ${CUDA_ROOT}/lib64/:${LIBRARY_PATH}
 ENV CPATH ${CUDA_ROOT}/include/:${LIBRARY_PATH}
 
+RUN cuda-install-samples-8.0.sh /tmp/ && \
+	cd /tmp/NVIDIA_CUDA-8.0_Samples/ && \
+	make -j 10
+RUN rsync --archive /tmp/NVIDIA_CUDA-8.0_Samples/bin/ppc64le/linux/release/ /opt/cuda-samples && rm -rf /tmp/NVIDIA_CUDA-8.0_Samples
+
 #### OTHER STUFF
 
 # RUN sudo chsh -s /bin/bash nimbix
