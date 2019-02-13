@@ -26,7 +26,16 @@
             "interactive": true,
             "name": "Notebook",
             "description": "Launch the Jupyter Notebook of the training.",
-            "parameters": {}
+            "parameters": {
+                "-s": {
+                    "name": "-s",
+                    "description": "-s",
+                    "type": "CONST",
+                    "value": "/opt/environment.sh",
+                    "positional": false,
+                    "required": true
+                }
+            }
         },
         "Notebook_bash": {
             "path": "/usr/local/bin/nimbix_notebook",
