@@ -28,15 +28,8 @@
             "description": "Launch the Jupyter Notebook of the training.",
             "parameters": {}
         },
-        "Notebook_env": {
-            "path": "/usr/bin/env /usr/local/bin/nimbix_notebook",
-            "interactive": true,
-            "name": "Notebook_env",
-            "description": "Launch the Jupyter Notebook of the training.",
-            "parameters": {}
-        },
         "Notebook_bash": {
-            "path": "/usr/bash /usr/local/bin/nimbix_notebook",
+            "path": "/bin/bash /usr/local/bin/nimbix_notebook",
             "interactive": true,
             "name": "Notebook_bash",
             "description": "Launch the Jupyter Notebook of the training.",
