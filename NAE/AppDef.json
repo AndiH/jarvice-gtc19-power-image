@@ -36,13 +36,6 @@
                     "required": true
                 }
             }
-        },
-        "Notebook_bash": {
-            "path": "/usr/local/bin/nimbix_notebook",
-            "interactive": true,
-            "name": "Notebook_bash",
-            "description": "Launch the Jupyter Notebook of the training.",
-            "parameters": {}
         }
     },
     "image": {
