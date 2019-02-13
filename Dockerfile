@@ -48,6 +48,11 @@ ENV LD_LIBRARY_PATH ${CUDA_ROOT}/lib64/:${LD_LIBRARY_PATH}
 ENV LIBRARY_PATH ${CUDA_ROOT}/lib64/:${LIBRARY_PATH}
 ENV CPATH ${CUDA_ROOT}/include/:${LIBRARY_PATH}
 
+#### OTHER STUFF
+
+# RUN sudo chsh -s /bin/bash nimbix
+SHELL ["/bin/bash", "-c"]
+
 #### META DATA FOR NIMBIX / JARVICE
 
 COPY NAE/help.html /etc/NAE/help.html
