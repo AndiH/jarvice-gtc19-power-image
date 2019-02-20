@@ -2,11 +2,11 @@ FROM nimbix/ubuntu-cuda-ppc64le
 LABEL maintainer "Andreas Herten <a.herten@fz-juelich.de>"
 
 RUN apt-get -y update && \
-    apt-get -y install bash python3-pip libzmq3-dev
+    apt-get -y install bash python3-pip libzmq3-dev libnuma1
 
 #### INSTALL NIMBIX NOTEBOOK STUFF
 
-RUN python3 -m pip install -U cython
+RUN python3 -m pip install -U cython pyzmq==17.1.2
 
 ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
 RUN bash /tmp/install-ubuntu.sh 3 && rm -f /tmp/install-ubuntu.sh
