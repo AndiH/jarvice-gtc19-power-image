@@ -2,7 +2,7 @@ FROM nimbix/ubuntu-cuda-ppc64le
 LABEL maintainer "Andreas Herten <a.herten@fz-juelich.de>"
 
 RUN apt-get -y update && \
-    apt-get -y install bash python3-pip libzmq3-dev
+    apt-get -y install bash python3-pip libzmq3-dev libnuma1
 
 #### INSTALL NIMBIX NOTEBOOK STUFF
 
