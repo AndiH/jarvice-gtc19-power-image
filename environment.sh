@@ -8,6 +8,7 @@ PGI_VERSION=18.10
 export PGI_INSTALL_DIR=/usr/local/pgi
 PGI_ARCH=linuxpower
 export PGI_HOME=${PGI_INSTALL_DIR}/${PGI_ARCH}/${PGI_VERSION}
+export PGI_ACC_POOL_ALLOC=0
 
 export MPI_ROOT=/usr/local/pgi/linuxpower/18.10/mpi/openmpi/
 
