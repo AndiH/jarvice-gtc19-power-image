@@ -11,6 +11,7 @@ RUN python3 -m pip install -U cython pyzmq==17.1.2
 RUN pip3 freeze
 
 ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
+RUN sed -i "s/pip3 install --upgrade packaging/pip3 install packaging/" /tmp/install-ubuntu.sh
 RUN bash /tmp/install-ubuntu.sh 3 && rm -f /tmp/install-ubuntu.sh
 
 #### PGI: INSTALL & CONFIGURE
