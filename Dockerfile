@@ -8,6 +8,8 @@ RUN apt-get -y update && \
 
 RUN python3 -m pip install -U cython pyzmq==17.1.2
 
+RUN pip3 freeze
+
 ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
 RUN bash /tmp/install-ubuntu.sh 3 && rm -f /tmp/install-ubuntu.sh
 
