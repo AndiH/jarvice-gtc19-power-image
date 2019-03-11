@@ -29,3 +29,22 @@ export CPATH=${CUDA_ROOT}/include/:${CPATH}
 export CPATH=${MPI_ROOT}/include/:${CPATH}
 
 export MANPATH=${PGI_HOME}/man/:${MANPATH}
+
+
+export GTC19_REPO_URL=https://gitlab.version.fz-juelich.de/herten1/gtc19-power-openacc.git
+export GTC19_REPO_TMP_TGT=/tmp/gtc19-repo/
+
+function gtc19_init() {
+	if [[ ! -e /data/.init || $1 == "-f" ]]; then
+		if [[ $2 == "-f" ]]; then
+			rm -rf $GTC19_REPO_TMP_TGT
+		fi
+		git clone $GTC19_REPO_URL $GTC19_REPO_TMP_TGT
+		rsync --archive --exclude='.*' --delete --verbose $GTC19_REPO_TMP_TGT/tasks/ /data/
+		echo $(date) > /data/.init
+	else
+		echo "/data/.init already exists!"
+		echo "Use ${FUNCNAME[0]} -f to force re-initialization"
+		echo "Use ${FUNCNAME[0]} -f -f to also force re-git-downloading"
+	fi
+}
