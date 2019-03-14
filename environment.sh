@@ -30,7 +30,10 @@ export CPATH=${MPI_ROOT}/include/:${CPATH}
 
 export MANPATH=${PGI_HOME}/man/:${MANPATH}
 
+
+
 export OMP_NUM_THREADS=2
+export OMPI_MCA_btl_base_warn_component_unused=0
 
 
 export GTC19_REPO_URL=https://gitlab.version.fz-juelich.de/herten1/gtc19-power-openacc.git

@@ -2,7 +2,7 @@
     "name": "GTC19 POWER+OpenACC Lab Image",
     "description": "Image for GTC19 Lab on Acceleration of OpenPOWER Systems with OpenACC. Includes all necessary software. Access via Jupyter Notebooks.",
     "author": "Andreas Herten",
-    "licensed": false,
+    "licensed": true,
     "classifications": [
         "Data Science",
         "IBM POWER/Data Science",
