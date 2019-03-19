@@ -12,7 +12,8 @@
         "Training"
     ],
     "machines": [
-        "np*g*"
+        "np9g4-gtc-demo",
+        "np8gk1-gtc-demo"
     ],
     "vault-types": [
         "FILE",
