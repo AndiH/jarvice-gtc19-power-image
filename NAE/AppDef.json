@@ -13,7 +13,9 @@
     ],
     "machines": [
         "np9g4-gtc-demo",
-        "np8gk1-gtc-demo"
+        "np8gk1-gtc-demo",
+        "np9g*",
+        "np8gk2"
     ],
     "vault-types": [
         "FILE",
